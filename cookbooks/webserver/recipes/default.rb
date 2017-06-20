@@ -10,6 +10,9 @@ end
 service "apache2" do
 	action ['enable','start']
 end
-template '/var/www/html/index.html' do
-	source 'index.html.erb'
+#template '/var/www/html/index.html' do
+#	source 'index.html.erb'
+#end
+search(:node, "hostname:node1").each do |obj|
+	file '/root/ipinfo' do
 end
