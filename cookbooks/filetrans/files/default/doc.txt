@@ -1,0 +1,232 @@
+    1  apt-get update
+    2  hostname workstation
+    3  nano /etc/hostname
+    4  exec bash
+    5  nano /etc/hosts
+    6  /home
+    7  cd /home
+    8  ls
+    9  cd manish
+   10  ls
+   11  cd Desktop
+   12  ls
+   13  chef-repo/
+   14  cd chef-repo
+   15  ls
+   16  cd..
+   17  cd/
+   18  ls
+   19  cd\\
+   20  cd
+   21  cd /home/manish
+   22  cd Desktop
+   23  ls
+   24  mv /chef-repo ~
+   25  mv chef-repo/ ~
+   26  mv chefdk_1.4.3-1_amd64.deb ~
+   27  cd
+   28  ls
+   29  chef
+   30  dpkg -i chefdk_1.4.3-1_amd64.deb 
+   31  chef
+   32  knife
+   33  chef-verify
+   34  chef -verify
+   35  chef verify\
+   36  chef verify
+   37  dpkg -i chefdk_1.4.3-1_amd64.deb 
+   38  export https_proxy=https://16.85.88.10:8088
+   39  chef verify
+   40  ls
+   41  cd chef-repo
+   42  ls
+   43  ls -la
+   44  cd .chef
+   45  ls
+   46  cat knife.rb
+   47  cat manish_r1990.pem
+   48  cd..
+   49  cd ..
+   50  ls
+   51  ls -la
+   52  ping node1
+   53  knife bootstrap node1 --ssh-user manish --ssh-password M@ster17 --sudo --use-sudo-password --node-name node1
+   54  knife bootstrap node1 --ssh-user manish --ssh-password M@ster17 --sudo --use-sudo-password --node-name node1 --bootstrap-proxy https://16.85.88.10:8088
+   55  knife bootstrap node1 --ssh-user manish --ssh-password M@ster17 --sudo --use-sudo-password --node-name node2 --bootstrap-proxy https://16.85.88.10:8088
+   56  knife bootstrap node2 --ssh-user manish --ssh-password M@ster17 --sudo --use-sudo-password --node-name node2 --bootstrap-proxy https://16.85.88.10:8088
+   57  knife bootstrap node1 --ssh-user manish --ssh-password M@ster17 --sudo --use-sudo-password --node-name node1 --bootstrap-proxy https://16.85.88.10:8088
+   58  git
+   59  apt-get install git
+   60  git
+   61  git config
+   62  git config --global user.email manish.r1990@gmail.com
+   63  history
+   64  nano /commands
+   65  git init
+   66  git add *
+   67  git commit -m "commit commit"
+   68  git remote add origin root@workstation:~/chef-repo# history
+   69  git remote add origin https://github.com/manishr1990/chefcook.git
+   70  git push origin master
+   71  ls
+   72  cd cookbooks
+   73  ls
+   74  cd startter
+   75  cd starter
+   76  ls
+   77  cd ..
+   78  mkdir cookcook
+   79  ls
+   80  cd cookcook
+   81  ls
+   82  mkdir recipes
+   83  ls
+   84  cd recipes
+   85  nano default.rb
+   86  ls
+   87  cat default.rb
+   88  knife cookbook upload cookcook
+   89  nano default.rb
+   90  ls
+   91  knife cookbook upload cookcook
+   92  cd ..
+   93  ls
+   94  cd starter
+   95  ls
+   96  mv metadata.rb /chef-repo/cookbooks/cookcook/recipes/
+   97  ls
+   98  cd ..
+   99  ls
+  100  cd cookcook
+  101  ls
+  102  cd recipes
+  103  ls
+  104  cd ..
+  105  ls
+  106  cd starter
+  107  ls
+  108  mv metadata.rb /chef-repo/cookbooks/cookcook/recipes
+  109  mv metadata.rb chef-repo/cookbooks/cookcook/recipes
+  110  ls
+  111  cd ..\
+  112  cd ..
+  113  cd..
+  114  cd ..
+  115  cd chef-repo/
+  116  ls
+  117  cd cookbooks/
+  118  ls
+  119  cd cookccok
+  120  cd cookocok
+  121  cd cookcook
+  122  ls
+  123  cd recipes
+  124  ls
+  125  cd ..
+  126  ls
+  127  cd starter
+  128  ls
+  129  mv metadata.rb ~/root
+  130  ls
+  131  cd ..
+  132  ls
+  133  cd /root
+  134  ls
+  135  cd chef-repo/
+  136  ls
+  137  cd cookbooks
+  138  ls
+  139  cd ..
+  140  cd starter
+  141  cd starter/
+  142  ls
+  143  cd cookbooks
+  144  ls
+  145  cd cookcook
+  146  ls
+  147  recipes
+  148  cd recipes
+  149  ls
+  150  nano metadata.rb
+  151  ls
+  152  mv metadata.rb /chef-repo/cookbooks/cookcook
+  153  mv metadata.rb /chef-repo/cookbooks/cookcook/
+  154  mv metadata.rb cookbooks/cookcook/
+  155  mv metadata.rb /root/chef-repo/cookbooks/cookcook/
+  156  ls
+  157  cd ..
+  158  ls
+  159  knife cookbook upload cookcook
+  160  ls
+  161  nano metadata.rb
+  162  knife cookbook upload cookcook
+  163  nano metadata.rb
+  164  knife cookbook upload cookcook
+  165  knife node show node1
+  166  knife node run_list add node1 'recipe[cookcook::default]'
+  167  knife node show node1
+  168  ls
+  169  cd recipes
+  170  ls
+  171  nano new.rb
+  172  ls
+  173  knife cookbook upload cookcook
+  174  knife node run_list add node2 'recipe[cookcook::new]'
+  175  knife diff cookcook
+  176  cd ..
+  177  knife diff cookcook
+  178  knife node show node2
+  179  cd cookcook
+  180  ls
+  181  cd recipes
+  182  ls
+  183  nano new.rb
+  184  cd ..
+  185  knife diff cookcook
+  186  knife cookbook upload cookcook
+  187  knife node run_list add node2 'recipe[cookcook::new]'
+  188  knife node show node2
+  189  cd recipes
+  190  cd cookcook
+  191  cd recipes
+  192  ls
+  193  nano new.rb
+  194  cd ..
+  195  knife cookbook upload cookcook
+  196  knife node run_list add node2 'recipe[cookcook::new]'
+  197  knife node show node2
+  198  cd cookcook
+  199  cd recipes
+  200  nano new.rb
+  201  cd ..
+  202  knife cookbook upload cookcook
+  203  knife node run_list add node2 'recipe[cookcook::new]'
+  204  knife node show node2
+  205  cd ..
+  206  cd cookbooks
+  207  cd cookcook
+  208  cd recipes
+  209  nano default.rb
+  210  cd ..
+  211  knife cookbook upload cookcook
+  212  knife node run_list add node2 'recipe[cookcook::new]'
+  213  mkdir newbook
+  214  cd newbook
+  215  mkdir recipes
+  216  cd recipes
+  217  ls
+  218  nano default.rb
+  219  cd ..
+  220  cd cookcook
+  221  ls
+  222  cp metadata.rb /root/chef-repo/cookbooks/newbook/
+  223  cd ..
+  224  cd newbook
+  225  ls
+  226  nano metadata.rb
+  227  knife cookbook upload newbook
+  228  knife node run_list add node2 'recipe[newbook::default]'
+  229  knife node show node2
+  230  ls
+  231  history
+
