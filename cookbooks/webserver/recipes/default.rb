@@ -3,6 +3,8 @@
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
+node.default['1customattribute']='Running from Recipe'
+node.default['1customattribute']['child1']=['Running from child','Child from recipe']
 package 'Install Apache' do
 	package_name 'apache2'
 	action 'install'
@@ -15,4 +17,5 @@ end
 #end
 search(:node, "hostname:node1").each do |obj|
 	file '/root/ipinfo' do
+	end
 end
