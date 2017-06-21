@@ -1,0 +1,603 @@
+Script started on Wednesday 21 June 2017 10:23:03 AM IST
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# knife data baf from fileusers[K[K[K[K[K users u1. json
+FATAL: Cannot find subcommand for: 'data baf from file users u1.json'
+Available subcommands: (for details, knife SUB-COMMAND --help)
+
+** OPSCODE PRIVATE CHEF ORGANIZATION MANAGEMENT COMMANDS **
+knife opc org create ORG_SHORT_NAME ORG_FULL_NAME (options)
+knife opc org delete ORG_NAME
+knife opc org edit ORG
+knife opc org list
+knife opc org show ORGNAME
+knife opc org user add ORG_NAME USER_NAME
+knife opc org user remove ORG_NAME USER_NAME
+knife opc user create USERNAME FIRST_NAME [MIDDLE_NAME] LAST_NAME EMAIL PASSWORD
+knife opc user delete USERNAME [-d]
+knife opc user edit USERNAME
+knife opc user list
+knife opc user password USERNAME [PASSWORD | --enable-external-auth]
+knife opc user show USERNAME
+
+** BOOTSTRAP COMMANDS **
+knife bootstrap [SSH_USER@]FQDN (options)
+knife bootstrap windows ssh FQDN (options)
+knife bootstrap windows winrm FQDN (options)
+
+** CLIENT COMMANDS **
+knife client bulk delete REGEX (options)
+knife client create CLIENTNAME (options)
+knife client delete [CLIENT[,CLIENT]] (options)
+knife client edit CLIENT (options)
+Usage: /usr/bin/knife (options)
+knife client key delete CLIENT KEYNAME (options)
+knife client key edit CLIENT KEYNAME (options)
+knife client key list CLIENT (options)
+knife client key show CLIENT KEYNAME (options)
+knife client list (options)
+knife client reregister CLIENT (options)
+knife client show CLIENT (options)
+
+** CONFIGURE COMMANDS **
+knife configure (options)
+knife configure client DIRECTORY
+
+** COOKBOOK COMMANDS **
+knife cookbook bulk delete REGEX (options)
+knife cookbook create COOKBOOK (options)
+knife cookbook delete COOKBOOK VERSION (options)
+knife cookbook download COOKBOOK [VERSION] (options)
+knife cookbook list (options)
+knife cookbook metadata COOKBOOK (options)
+knife cookbook metadata from FILE (options)
+knife cookbook show COOKBOOK [VERSION] [PART] [FILENAME] (options)
+knife cookbook test [COOKBOOKS...] (options)
+knife cookbook upload [COOKBOOKS...] (options)
+
+** COOKBOOK SITE COMMANDS **
+knife cookbook site download COOKBOOK [VERSION] (options)
+knife cookbook site install COOKBOOK [VERSION] (options)
+knife cookbook site list (options)
+knife cookbook site search QUERY (options)
+knife cookbook site share COOKBOOK [CATEGORY] (options)
+knife cookbook site show COOKBOOK [VERSION] (options)
+knife cookbook site unshare COOKBOOK
+
+** DATA BAG COMMANDS **
+knife data bag create BAG [ITEM] (options)
+knife data bag delete BAG [ITEM] (options)
+knife data bag edit BAG ITEM (options)
+knife data bag from file BAG FILE|FOLDER [FILE|FOLDER..] (options)
+knife data bag list (options)
+knife data bag show BAG [ITEM] (options)
+
+** DECRYPT COMMANDS **
+knife decrypt VAULT ITEM [VALUES] (options)
+
+** EC2 COMMANDS **
+knife ec2 amis ubuntu DISTRO [TYPE] (options)
+
+** ENCRYPT COMMANDS **
+knife encrypt create VAULT ITEM VALUES (options)
+knife encrypt delete VAULT ITEM (options)
+knife encrypt remove VAULT ITEM VALUES (options)
+knife encrypt rotate keys VAULT ITEM (options)
+knife encrypt update VAULT ITEM VALUES (options)
+
+** ENVIRONMENT COMMANDS **
+knife environment compare [ENVIRONMENT..] (options)
+knife environment create ENVIRONMENT (options)
+knife environment delete ENVIRONMENT (options)
+knife environment edit ENVIRONMENT (options)
+knife environment from file FILE [FILE..] (options)
+knife environment list (options)
+knife environment show ENVIRONMENT (options)
+
+** EXEC COMMANDS **
+knife exec [SCRIPT] (options)
+
+** HELP COMMANDS **
+knife help [list|TOPIC]
+
+** INDEX COMMANDS **
+knife index rebuild (options)
+
+** JOB COMMANDS **
+knife job list
+knife job output <job id> <node> [<node> ...]
+knife job start <command> [<node> <node> ...]
+knife job status <job id>
+
+** KNIFE COMMANDS **
+Usage: /usr/bin/knife (options)
+
+** NODE COMMANDS **
+knife node bulk delete REGEX (options)
+knife node create NODE (options)
+knife node delete [NODE[,NODE]] (options)
+knife node edit NODE (options)
+knife node environment set NODE ENVIRONMENT
+knife node from file FILE (options)
+knife node list (options)
+knife node run_list add [NODE] [ENTRY[,ENTRY]] (options)
+knife node run_list remove [NODE] [ENTRY[,ENTRY]] (options)
+knife node run_list set NODE ENTRIES (options)
+knife node show NODE (options)
+knife node status [<node> <node> ...]
+
+** NULL COMMANDS **
+knife null
+
+** OSC COMMANDS **
+knife osc_user create USER (options)
+knife osc_user delete USER (options)
+knife osc_user edit USER (options)
+knife osc_user list (options)
+knife osc_user reregister USER (options)
+knife osc_user show USER (options)
+
+** PATH-BASED COMMANDS **
+knife delete [PATTERN1 ... PATTERNn]
+knife deps PATTERN1 [PATTERNn]
+knife diff PATTERNS
+knife download PATTERNS
+knife edit [PATTERN1 ... PATTERNn]
+knife list [-dfR1p] [PATTERN1 ... PATTERNn]
+knife show [PATTERN1 ... PATTERNn]
+knife upload PATTERNS
+knife xargs [COMMAND]
+
+** RAW COMMANDS **
+knife raw REQUEST_PATH
+
+** RECIPE COMMANDS **
+knife recipe list [PATTERN]
+
+** REHASH COMMANDS **
+knife rehash
+
+** ROLE COMMANDS **
+knife role bulk delete REGEX (options)
+knife role create ROLE (options)
+knife role delete ROLE (options)
+knife role edit ROLE (options)
+knife role env_run_list add [ROLE] [ENVIRONMENT] [ENTRY[,ENTRY]] (options)
+knife role env_run_list clear [ROLE] [ENVIRONMENT]
+knife role env_run_list remove [ROLE] [ENVIRONMENT] [ENTRIES]
+knife role env_run_list replace [ROLE] [ENVIRONMENT] [OLD_ENTRY] [NEW_ENTRY] 
+knife role env_run_list set [ROLE] [ENVIRONMENT] [ENTRIES]
+knife role from file FILE [FILE..] (options)
+knife role list (options)
+knife role run_list add [ROLE] [ENTRY[,ENTRY]] (options)
+knife role run_list clear [ROLE]
+knife role run_list remove [ROLE] [ENTRY]
+knife role run_list replace [ROLE] [OLD_ENTRY] [NEW_ENTRY] 
+knife role run_list set [ROLE] [ENTRIES]
+knife role show ROLE (options)
+
+** SEARCH COMMANDS **
+knife search INDEX QUERY (options)
+
+** SERVE COMMANDS **
+knife serve (options)
+
+** SPORK COMMANDS **
+knife spork bump COOKBOOK [major|minor|patch|manual]
+knife spork check COOKBOOK (options)
+knife spork data bag create BAG [ITEM] (options)
+knife spork data bag delete BAG [ITEM] (options)
+knife spork data bag edit BAG ITEM (options)
+knife spork data bag from file BAG FILE|FOLDER [FILE|FOLDER..] (options)
+knife spork delete [COOKBOOKS...] (options)
+knife spork environment check ENVIRONMENT (options)
+knife spork environment create ENVIRONMENT (options)
+knife spork environment delete ENVIRONMENT (options)
+knife spork environment edit ENVIRONMENT (options)
+knife spork environment from file FILENAME (options)
+knife spork info
+knife spork node create NODE (options)
+knife spork node delete NODE (options)
+knife spork node edit NODE (options)
+knife spork node from file FILE (options)
+knife spork node run_list add [NODE] [ENTRY[,ENTRY]] (options)
+knife spork node run_list add [NODE] [ENTRY[,ENTRY]] (options)
+knife spork node run_list set NODE ENTRIES (options)
+knife spork omni COOKBOOK (options)
+knife spork promote ENVIRONMENT COOKBOOK (options)
+knife spork role create ROLE (options)
+knife spork role delete ROLENAME (options)
+knife spork role edit ROLENAME (options)
+knife spork role from file FILENAME (options)
+knife spork upload [COOKBOOKS...] (options)
+
+** SSH COMMANDS **
+knife ssh QUERY COMMAND (options)
+
+** SSL COMMANDS **
+knife ssl check [URL] (options)
+knife ssl fetch [URL] (options)
+
+** STATUS COMMANDS **
+knife status QUERY (options)
+
+** SUPERMARKET COMMANDS **
+knife supermarket download COOKBOOK [VERSION] (options)
+knife supermarket install COOKBOOK [VERSION] (options)
+knife supermarket list (options)
+knife supermarket search QUERY (options)
+knife supermarket share COOKBOOK [CATEGORY] (options)
+knife supermarket show COOKBOOK [VERSION] (options)
+knife supermarket unshare COOKBOOK (options)
+
+** TAG COMMANDS **
+knife tag create NODE TAG ...
+knife tag delete NODE TAG ...
+knife tag list NODE
+
+** USER COMMANDS **
+knife user create USERNAME DISPLAY_NAME FIRST_NAME LAST_NAME EMAIL PASSWORD (options)
+knife user delete USER (options)
+knife user edit USER (options)
+knife user key create USER (options)
+knife user key delete USER KEYNAME (options)
+knife user key edit USER KEYNAME (options)
+knife user key list USER (options)
+knife user key show USER KEYNAME (options)
+knife user list (options)
+knife user reregister USER (options)
+knife user show USER (options)
+
+** VAULT COMMANDS **
+knife vault create VAULT ITEM VALUES (options)
+knife vault decrypt VAULT ITEM [VALUES] (options)
+knife vault delete VAULT ITEM (options)
+knife vault download VAULT ITEM PATH (options)
+knife vault edit VAULT ITEM (options)
+knife vault isvault VAULT ITEM (options)
+knife vault itemtype VAULT ITEM (options)
+knife vault list (options)
+knife vault refresh VAULT ITEM
+knife vault remove VAULT ITEM VALUES (options)
+knife vault rotate all keys
+knife vault rotate keys VAULT ITEM (options)
+knife vault show VAULT [ITEM] [VALUES] (options)
+knife vault update VAULT ITEM VALUES (options)
+
+** WINDOWS COMMANDS **
+knife windows cert generate FILE_PATH (options)
+knife windows cert install CERT [CERT] (options)
+knife bootstrap windows winrm FQDN (options)
+knife bootstrap windows ssh FQDN (options)
+knife winrm QUERY COMMAND (options)
+knife wsman test QUERY (options)
+knife windows listener create (options)
+
+** WINRM COMMANDS **
+knife winrm QUERY COMMAND (options)
+
+** WSMAN COMMANDS **
+knife wsman test QUERY (options)
+
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# knife data baf from file users u1.jjson[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C from file users u1.js[1Pon[A]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# [C[C[C[C[C[C[C[C[C[C[C[C[Cg from file users u1.json[A]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# [C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C
+[31m[1mERROR:[0m FFI_Yajl::ParseError: parse error: after key and value, inside map, I expect ',' or '}'
+          ":1201, 	"home":"/home/u1" 	"password":"$6$R40caZqp$zyPkCIdo
+                     (right here) ------^
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# u1[K[Knano u1.json
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6               File: u1.json                                    [3;1H(B[m{[4;9H"id":"u1",[5;9H"uid":1201,[6;9H"home":"/home/u1"[7;9H"password":"$6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHq$[8;1H}[26;33H(B[0;7m[ Read 6 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[6;26H[1;71H(B[0;7mModified[6;26H(B[m,[7d$8nPPHqYwy.2tIaTgEXdq8m2KmMbL4.RA4NSWuxuVMuX30"[K[8G[1K "password":"$6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHq$[8;2H[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: u1.json                                 [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;28H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 6 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# nano u23[K.json
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6               File: u2.json                                    [3;1H(B[m{[4;9H"id":"u2",[5;9H"uid":1202,[6;9H"home":"/home/u2"[7;9H"password":"$6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHq$[8;1H}[26;33H(B[0;7m[ Read 7 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[6;26H[1;71H(B[0;7mModified[6;26H(B[m,[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: u2.json                                 [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;28H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 7 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# nano u2.json1.jsonknife data bag from file users u1.jjson
+Updated data_bag_item[users::u1]
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# knife data bag from file users u1.jjson[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.js[1Pon[A]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.json[A]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C
+[31m[1mERROR:[0m FFI_Yajl::ParseError: lexical error: invalid character inside string.
+          o21qobsbaIB3FowKWFCRUw78nPPHq$ }  
+                     (right here) ------^
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# nano u2.json
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6               File: u2.json                                    [3;1H(B[m{[4;9H"id":"u2",[5;9H"uid":1202,[6;9H"home":"/home/u2",[7;9H"password":"$6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHq$[8;1H}[26;33H(B[0;7m[ Read 7 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d$[72P[9G[1;71H(B[0;7mModified[7;9H(B[m"[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: u2.json                                 [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;28H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 7 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# nano u2.jsonknife data bag from file users u2.jjson
+Updated data_bag_item[users::u2]
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# knife data bag show usres[K[K[Kers
+u1
+u2
+]0;root@workstation: ~/chef-repo/data_bags/usersroot@workstation:~/chef-repo/data_bags/users# cd ..
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd ..
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# cd[K[Kknife cookbook creatre[K[Ke usermnag[K[K[Kanage
+WARN: This command is being deprecated in favor of `chef generate cookbook` and will soon return an error.
+Please use `chef generate cookbook` instead of this command.
+ at /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/knife.rb:443:in `block in run_with_pretty_exceptions'
+** Creating cookbook usermanage in /root/chef-repo/cookbooks
+** Creating README for cookbook: usermanage
+** Creating CHANGELOG for cookbook: usermanage
+** Creating metadata for cookbook: usermanage
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# cd cookbooks/
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd usermanage/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd recipes/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# nano default.rb
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: usermanage[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[26;33H[39m(B[0;7m[ Read 8 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[26d[K[11d[27d[J[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# knife search  [Kusers "" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C*""|"*"[C
+[31m[1mERROR:[0m knife search failed: invalid search query: 'tags:**|** OR roles:**|** OR fqdn:**|** OR addresses:**|** OR policy_name:**|** OR policy_group:**|**'
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# knife search users "*||*"[C[1P*":*"[C[C
+2 items found
+
+[36mchef_type:[0m data_bag_item
+[36mdata_bag: [0m users
+[36mhome:     [0m /home/u2
+[36mid:       [0m u2
+[36mpassword: [0m $6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHq$
+[36muid:      [0m 1202
+
+[36mchef_type:[0m data_bag_item
+[36mdata_bag: [0m users
+[36mhome:     [0m /home/u1
+[36mid:       [0m u1
+[36mpassword: [0m $6$R40caZqp$zyPkCIdoQYMdG18jTio21qobsbaIB3FowKWFCRUw78nPPHqYwy.2tIaTgEXdq8m2KmMbL4.RA4NSWuxuVMuX30
+[36muid:      [0m 1201
+
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# knife search users "*::*"|*"[A]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# [6Pnano default.rb
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: usermanage[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[26;33H[39m(B[0;7m[ Read 8 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[1;71H(B[0;7mModified[11d(B[msear[26d[K[11;5Hch()u)s)e)r)s))[K)[K)[K)[K)[K:)u)s)e)r)s) ))[K)[K)[K)[K)[K)[K)[K:)::)u)s)e)r)s) )( ::users )[11;9H[11;18H )[K )[K )[K )[K )[K: )[K )[K)[K  ): ):: )  )u )s ) )[K )[K)[K: )[K )[K)[K: )u )s )e )r )s )  ))[K, )  )" )[32m""[39m(B[m )[32mi"[39m(B[m )[32md"[39m(B[m )[32m="[39m(B[m )[32mu"[39m(B[m )[32m1"[39m(B[m )[25G ).each d[33mdo[39m(B[m[12d[12;9H[A[11;33H ||o|b|j||[12;9Hen[33mend[39m(B[m7[12;26r8M[1;28r[13;1H[A[12;9Huser '[32m''[39m(B[m[32mo'[39m(B[m[32mb'[39m(B[m[32mj'[39m(B[m[32m.'[39m(B[m[] [8G[1K[12;20H[C[32m'[39m(B[m[K[32m['[39m(B[m[32m]'[39m(B[m[32m"]'[39m(B[m[32m""]'[39m(B[m[32mi"]'[39m(B[m[32md"]'[39m(B[m[25Gd[33mdo[39m(B[m7[13;26r8[13dM[1;28r[13;1H[13;9H[13;17Hhome [Aobj[[32m"id"[39m(B[m]'[33mdo[39m(B[m[K[12;14Hobj[[C[C[C[C]'[33mdo[39m(B[m[K [33mdo[39m(B[m[13dobj []"][32m""[39m(B[m][32mh"[39m(B[m][32mo"[39m(B[m][32mm"[39m(B[m][32me"[39m(B[m][33G7[14;26r8[14dM[1;28r[14;1H[14;9H[14;17Hhome    [K[14;17Huid obj[]"][32m""[39m(B[m][32mu"[39m(B[m][32mi"[39m(B[m][32md"[39m(B[m][31G7[15;26r8[15dM[1;28r[15;1H[15;9H[15;17Hpassword obj[]"][32m""[39m(B[m][32mp"[39m(B[m][32ma"[39m(B[m][32ms"[39m(B[m][32mss"[39m(B[m][32mw"[39m(B[m][32mo"[39m(B[m][32mr"[39m(B[m][32md"[39m(B[m][41G7[16;26r8[16dM[1;28r[16;1H[16;9H[16;17Haction '[32m''[39m(B[m[32mc'[39m(B[m[32mr'[39m(B[m[32me'[39m(B[m[32ma'[39m(B[m[32mt'[39m(B[m[32me'[39m(B[m[C7[17;26r8[17dM[1;28r[17;1H[17;9H[17;17Hen[33mend[39m(B[m[18;4H[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: default.rb                              [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;31H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 16 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# nano default.rb
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: usermanage[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[11d[39m(B[msearch(:users, [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[12;9Huser obj[[32m"id"[39m(B[m] [33mdo[13;17H[39m(B[mhome obj[[32m"home"[39m(B[m][14;17Huid obj[[32m"uid"[39m(B[m][15;17Hpassword obj[[32m"password"[39m(B[m][16;17Haction [32m'create'[17;17H[33mend[18dend[26;32H[39m(B[0;7m[ Read 16 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[27d[J[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# cd ..
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd ..
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cookc[Kbook upload usermanage
+Uploading usermanage     [0.1.0]
+Uploaded 1 cookbook.
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife role for[K[K[K[K edit frontend
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6   File: /tmp/knife-edit-20170621-12723-1ocfty0.json            [3;1H(B[m{[4d "name": "frontend",[5;3H"description": "This role contains recipes for webserver",[6;3H"json_class": "Chef::Role",[7;3H"default_attributes": {[9;3H},[10d"override_attributes": {[12;3H},[13d"chef_type": "role",[14;3H"run_list": [[15;5H"recipe[webserver::default]"[16;3H],[17d"env_run_lists": {[19;3H}[20d}[26;32H(B[0;7m[ Read 18 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[12d[13d[14d[15d    "recipe[[1;71H(B[0;7mModified[15;13H(B[m[1P[1P[26d[K[15;13H[1P[1P[1P[1P[1P[1P[1Pu::default]"[15;14Hs::default]"[15;15He::default]"[15;16Hr::default]"[15;17Hm::default]"[15;18Ha::default]"[15;19Hn::default]"[15;20Ha::default]"[15;21Hg::default]"[15;22He::default]"[15;23H::defa[34G[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: /tmp/knife-edit-20170621-12723-1ocfty0.json[27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;64H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 18 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>Saved role[frontend]
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife role edit frontend
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6   File: /tmp/knife-edit-20170621-12731-aruqrd.json             [3;1H(B[m{[4d "name": "frontend",[5;3H"description": "This role contains recipes for webserver",[6;3H"json_class": "Chef::Role",[7;3H"default_attributes": {[9;3H},[10d"override_attributes": {[12;3H},[13d"chef_type": "role",[14;3H"run_list": [[15;5H"recipe[usermanage::default]"[16;3H],[17d"env_run_lists": {[19;3H}[20d}[26;32H(B[0;7m[ Read 18 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[12d[13d[14d[15d[16d[A[15;34H7[16;25r8[16dM[1;28r[1;71H(B[0;7mModified[16d(B[m[16;9H[15;34H,7[16;25r8[16dM[1;28r[16;1H [26d[K[16d    "recipe[]e]][Kw]e]b]s]e]r]v]e]r];]][K:]::]d]e]f]a]u]l]t]]"[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: /tmp/knife-edit-20170621-12731-aruqrd.json[27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;63H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 20 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>Saved role[frontend]
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd usernam
+bash: cd: usernam: No such file or directory
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd usermanage/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd recipes/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# nao [K[Kno default.rb 
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: usermanage[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[11d[39m(B[msearch(:users, [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[12;9Huser obj[[32m"id"[39m(B[m] [33mdo[13;17H[39m(B[mhome obj[[32m"home"[39m(B[m][14;17Huid obj[[32m"uid"[39m(B[m][15;17Hpassword obj[[32m"password"[39m(B[m][16;17Haction [32m'create'[17;17H[33mend[18dend[26;32H[39m(B[0;7m[ Read 16 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11dsearch(:[1;71H(B[0;7mModified[11;8H(B[m[1P'users, [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[11;9Husers[8G[32m'users'[39m(B[m, [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[11;15H[26d[K[11;40H[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: default.rb                              [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;31H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 16 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# cd ..
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd ..
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd ..nano default.rb [5Pcd recipes/usermanage/[4Pnamknife role edit frontendcookbook upload usermanage
+Uploading usermanage     [0.1.0]
+Uploaded 1 cookbook.
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# ls
+[0m[01;34marraytest[0m   [01;34mcookcook[0m   [01;34mlogic[0m    [01;34mnewcook[0m  [01;34mremotefile[0m  [01;34museradd[0m     [01;34mwebserver[0m
+chefignore  [01;34mfiletrans[0m  [01;34mnewbook[0m  [01;34mntp[0m      [01;34mstarter[0m     [01;34musermanage[0m
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd useradd/[K[K[K[Kmanage/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# ls
+[0m[01;34mattributes[0m    [01;34mdefinitions[0m  [01;34mlibraries[0m    [01;34mproviders[0m  [01;34mrecipes[0m    [01;34mtemplates[0m
+CHANGELOG.md  [01;34mfiles[0m        metadata.rb  README.md  [01;34mresources[0m
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd reci
+bash: cd: reci: No such file or directory
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# annc[K[K[K[Kcd recipes/
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# ls
+default.rb
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# nano default.rb 
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: usermanage[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[11d[39m(B[msearch([32m'users'[39m(B[m, [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[12;9Huser obj[[32m"id"[39m(B[m] [33mdo[13;17H[39m(B[mhome obj[[32m"home"[39m(B[m][14;17Huid obj[[32m"uid"[39m(B[m][15;17Hpassword obj[[32m"password"[39m(B[m][16;17Haction [32m'create'[17;17H[33mend[18dend[26;32H[39m(B[0;7m[ Read 16 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11dsearch([C[1;71H(B[0;7mModified[11;8H(B[musers'[1P[8G users', [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[11;9H[35m :users[39m(B[m', [32m"id=u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[11;10H[C[C[C[C[C'[1P[26d[K[11;15H, [C[C[C[C[1P[32m:u1"[39m(B[m ).each [33mdo[39m(B[m |obj|[11;21H[C[C[C ).ea[A[C[11;29H[12;26H[13;29H[14d[15d[16dcreate'[K[24G[35m :create[39m(B[m'[25G[C[C[C[C[C[C' [35mx[39m(B[m [26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: default.rb                              [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;31H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 16 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# l[Kk[Kfoodcrictic default.r b
+No command 'foodcrictic' found, did you mean:
+ Command 'foodcritic' from package 'foodcritic' (universe)
+foodcrictic: command not found
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# clear
+[H[2J]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# knife cookbook upload  usermanae[Kge
+Uploading usermanage     [0.1.0]
+Uploaded 1 cookbook.
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# 
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# 
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# 
+]0;root@workstation: ~/chef-repo/cookbooks/usermanage/recipesroot@workstation:~/chef-repo/cookbooks/usermanage/recipes# cd ..
+]0;root@workstation: ~/chef-repo/cookbooks/usermanageroot@workstation:~/chef-repo/cookbooks/usermanage# cd ..
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd ..
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# clear
+[H[2J]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife vault
+FATAL: Cannot find subcommand for: 'vault'
+Available vault subcommands: (for details, knife SUB-COMMAND --help)
+
+** VAULT COMMANDS **
+knife vault create VAULT ITEM VALUES (options)
+knife vault decrypt VAULT ITEM [VALUES] (options)
+knife vault delete VAULT ITEM (options)
+knife vault download VAULT ITEM PATH (options)
+knife vault edit VAULT ITEM (options)
+knife vault isvault VAULT ITEM (options)
+knife vault itemtype VAULT ITEM (options)
+knife vault list (options)
+knife vault refresh VAULT ITEM
+knife vault remove VAULT ITEM VALUES (options)
+knife vault rotate all keys
+knife vault rotate keys VAULT ITEM (options)
+knife vault show VAULT [ITEM] [VALUES] (options)
+knife vault update VAULT ITEM VALUES (options)
+
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife vault create [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd data_bags/
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# mkdir data[K[K[K[Kpasswords
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# clear
+[H[2J]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# knife vault create password
+USAGE: knife vault create VAULT ITEM VALUES (options)
+    -A, --admins ADMINS              Chef users to be added as admins
+    -s, --server-url URL             Chef Server URL
+        --chef-zero-host HOST        Host to start chef-zero on
+        --chef-zero-port PORT        Port (or port range) to start chef-zero on.  Port ranges like 1000,1010 or 8889-9999 will try all given ports until one works.
+    -k, --key KEY                    API Client Key
+        --[no-]color                 Use colored output, defaults to enabled
+    -c, --config CONFIG              The configuration file to use
+        --config-option OPTION=VALUE Override a single configuration option
+        --defaults                   Accept default values for all questions
+    -d, --disable-editing            Do not open EDITOR, just accept the data as is
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -E, --environment ENVIRONMENT    Set the Chef environment (except for in searches, where this will be flagrantly ignored)
+        --file FILE                  File to be added to vault item as file-content
+        --[no-]fips                  Enable fips mode
+    -F, --format FORMAT              Which format to use for output
+    -J, --json FILE                  File containing JSON data to encrypt
+        --[no-]listen                Whether a local mode (-z) server binds to a port
+    -z, --local-mode                 Point knife commands at local repository instead of server
+    -u, --user USER                  API Client Username
+        --print-after                Show the data after a destructive operation
+    -S, --search SEARCH              Chef SOLR search for clients
+    -M, --mode MODE                  Chef mode to run in default - solo
+    -V, --verbose                    More verbose output. Use twice for max verbosity
+    -v, --version                    Show chef version
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# ls
+[0m[01;34mgroups[0m  [01;34mpasswords[0m  [01;34musers[0m
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# lsknife vault create passwords
+USAGE: knife vault create VAULT ITEM VALUES (options)
+    -A, --admins ADMINS              Chef users to be added as admins
+    -s, --server-url URL             Chef Server URL
+        --chef-zero-host HOST        Host to start chef-zero on
+        --chef-zero-port PORT        Port (or port range) to start chef-zero on.  Port ranges like 1000,1010 or 8889-9999 will try all given ports until one works.
+    -k, --key KEY                    API Client Key
+        --[no-]color                 Use colored output, defaults to enabled
+    -c, --config CONFIG              The configuration file to use
+        --config-option OPTION=VALUE Override a single configuration option
+        --defaults                   Accept default values for all questions
+    -d, --disable-editing            Do not open EDITOR, just accept the data as is
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -E, --environment ENVIRONMENT    Set the Chef environment (except for in searches, where this will be flagrantly ignored)
+        --file FILE                  File to be added to vault item as file-content
+        --[no-]fips                  Enable fips mode
+    -F, --format FORMAT              Which format to use for output
+    -J, --json FILE                  File containing JSON data to encrypt
+        --[no-]listen                Whether a local mode (-z) server binds to a port
+    -z, --local-mode                 Point knife commands at local repository instead of server
+    -u, --user USER                  API Client Username
+        --print-after                Show the data after a destructive operation
+    -S, --search SEARCH              Chef SOLR search for clients
+    -M, --mode MODE                  Chef mode to run in default - solo
+    -V, --verbose                    More verbose output. Use twice for max verbosity
+    -v, --version                    Show chef version
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd passwords/
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# c[Knano new[K[K[K[K[K[K[K[Kcd ..
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd ..
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# cd data_bags
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd data_bags..[Kpasswords/knife vault create passwords new
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6   File: /tmp/knife-edit-20170621-12843-cfsqvb.json             [3;1H(B[m{[5d}[26;33H(B[0;7m[ Read 3 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[1;71H(B[0;7mModified[4;9H(B[m""p"a"s"ss"w"o"r"d"":""H"p"e"@"2"0"1"7"[26d[K[4;29H"[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: /tmp/knife-edit-20170621-12843-cfsqvb.json[27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;63H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 3 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>WARN: Auto inflation of JSON data is deprecated. Please pass in the class to inflate or use #edit_hash (CHEF-1) at /opt/chefdk/embedded/lib/ruby/2.3.0/forwardable.rb:189:in `edit_data'.
+Please see https://docs.chef.io/deprecations_json_auto_inflate.html for further details and information on how to correct this problem.
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# knife data bad [K[Kg list
+groups
+users
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# knife vault list
+
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# ls
+[0m[01;34mgroups[0m  [01;34mpasswords[0m  [01;34musers[0m
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd passwords/
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# ls
+new.json  new_keys.json
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# cd ..
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# knife data ba[Kag s[Kpasswords[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K vault passwp[Kords [K[K[K[K[K[K[K[K[K[Kshow
+USAGE: knife vault show VAULT [ITEM] [VALUES] (options)
+    -s, --server-url URL             Chef Server URL
+        --chef-zero-host HOST        Host to start chef-zero on
+        --chef-zero-port PORT        Port (or port range) to start chef-zero on.  Port ranges like 1000,1010 or 8889-9999 will try all given ports until one works.
+    -k, --key KEY                    API Client Key
+        --[no-]color                 Use colored output, defaults to enabled
+    -c, --config CONFIG              The configuration file to use
+        --config-option OPTION=VALUE Override a single configuration option
+        --defaults                   Accept default values for all questions
+    -d, --disable-editing            Do not open EDITOR, just accept the data as is
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -E, --environment ENVIRONMENT    Set the Chef environment (except for in searches, where this will be flagrantly ignored)
+        --[no-]fips                  Enable fips mode
+    -F, --format FORMAT              Which format to use for output
+        --[no-]listen                Whether a local mode (-z) server binds to a port
+    -z, --local-mode                 Point knife commands at local repository instead of server
+    -u, --user USER                  API Client Username
+    -p, --print TYPE                 Print extra vault data, can be search, admins, clients or all
+        --print-after                Show the data after a destructive operation
+    -M, --mode MODE                  Chef mode to run in default - solo
+    -V, --verbose                    More verbose output. Use twice for max verbosity
+    -v, --version                    Show chef version
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# ls
+[0m[01;34mgroups[0m  [01;34mpasswords[0m  [01;34musers[0m
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd passwords/
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# ls
+new.json  new_keys.json
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# rm new.json
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# rm new.json_.jsonk.jsone.jsony.jsons.json[C[C[C[C[C
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# ls
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# cd ..
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd ..[3Plsrm new_keys.json[5P.jsonls[Kcd passwords/
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# knife vc[Kault create passwords n ew -A manish_r1990, [KNode1[K[K[K[K[Knode1 -M client[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6   File: /tmp/knife-edit-20170621-12929-13k718y.json            [3;1H(B[m{[5d}[26;33H(B[0;7m[ Read 3 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[1;71H(B[0;7mModified[4;9H(B[m""p"a"s"ss"w"o"r"d"":""H"p"e"@"2"0"1"7"[26d[K[4;29H[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: /tmp/knife-edit-20170621-12929-13k718y.json[27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;64H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 3 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>WARN: Auto inflation of JSON data is deprecated. Please pass in the class to inflate or use #edit_hash (CHEF-1) at /opt/chefdk/embedded/lib/ruby/2.3.0/forwardable.rb:189:in `edit_data'.
+Please see https://docs.chef.io/deprecations_json_auto_inflate.html for further details and information on how to correct this problem.
+WARNING: node1 not found in users, trying clients.
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# knife vault list
+passwords
+]0;root@workstation: ~/chef-repo/data_bags/passwordsroot@workstation:~/chef-repo/data_bags/passwords# cd ..
+]0;root@workstation: ~/chef-repo/data_bagsroot@workstation:~/chef-repo/data_bags# cd ..
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# cd cookbooks/
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cookbook create vault
+WARN: This command is being deprecated in favor of `chef generate cookbook` and will soon return an error.
+Please use `chef generate cookbook` instead of this command.
+ at /opt/chefdk/embedded/lib/ruby/gems/2.3.0/gems/chef-12.19.36/lib/chef/knife.rb:443:in `block in run_with_pretty_exceptions'
+** Creating cookbook vault in /root/chef-repo/cookbooks
+** Creating README for cookbook: vault
+** Creating CHANGELOG for cookbook: vault
+** Creating metadata for cookbook: vault
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd vault/
+]0;root@workstation: ~/chef-repo/cookbooks/vaultroot@workstation:~/chef-repo/cookbooks/vault# cd recipes/
+]0;root@workstation: ~/chef-repo/cookbooks/vault/recipesroot@workstation:~/chef-repo/cookbooks/vault/recipes# nao [K[Kno default.rb 
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: vault[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[26;33H[39m(B[0;7m[ Read 8 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[26d[K[11d[1;71H(B[0;7mModified[11d(B[msearch[7G     [K[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: default.rb                              [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;31H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 9 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/vault/recipesroot@workstation:~/chef-repo/cookbooks/vault/recipes# nano default.rb 
+[?1049h[1;28r(B[m[4l[?7h[?12l[?25h[?1h=[?1h=[?1h=[39;49m[39;49m(B[m[H[2J(B[0;7m  GNU nano 2.2.6              File: default.rb                                  [3;1H(B[0m[36m#[4d# Cookbook Name:: vault[5d# Recipe:: default[6d#[7d# Copyright 2017, YOUR_COMPANY_NAME[8d#[9d# All rights reserved - Do Not Redistribute[10d#[26;33H[39m(B[0;7m[ Read 9 lines ][27d^G(B[m Get Help  (B[0;7m^O(B[m WriteOut  (B[0;7m^R(B[m Read File (B[0;7m^Y(B[m Prev Page (B[0;7m^K(B[m Cut Text  (B[0;7m^C(B[m Cur Pos[28d(B[0;7m^X(B[m Exit[14G(B[0;7m^J(B[m Justify   (B[0;7m^W(B[m Where Is  (B[0;7m^V(B[m Next Page (B[0;7m^U(B[m UnCut Text(B[0;7m^T(B[m To Spell[3d[4d[5d[6d[7d[8d[9d[10d[11d[12d[1;71H(B[0;7mModified[11d(B[mchef_gem [32m'chef-vault'[39m(B[m [33mdo[12;3H[39m(B[mcompile_time [33mtrue[39m(B[m [33mif[39m(B[m respond_to?(:compile_time)[13d[33mend[15d[39m(B[mrequire [32m'chef-vault'[17d[39m(B[mitem = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"root"[39m(B[m)[18ditem[[32m"password"[39m(B[m][26d[K[18;17H[A::[C[C[C[C.load([C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[C[1P[1P[1P[32mp"[39m(B[m, [32m"root"[39m(B[m)[17;31H[32ma"[39m(B[m, [32m"root"[39m(B[m)[17;32H[32ms"[39m(B[m, [32m"root"[39m(B[m)[17;33H[32mss"[39m(B[m, [32m"root"[39m(B[m)[17;34H[32mw"[39m(B[m, [32m"root"[39m(B[m)[17;35H[32mo"[39m(B[m, [32m"root"[39m(B[m)[17;36H[32mr"[39m(B[m, [32m"root"[39m(B[m)[17;37H[32md"[39m(B[m, [32m"root"[39m(B[m)[17;38H[32ms"[39m(B[m, [32m"root"[39m(B[m)[17;39H[C, [C[C[C[C[32m"[39m(B[m)[K[32mo"[39m(B[m)[K[32m"[39m(B[m)[K[32m"[39m(B[m)[K[32mn"[39m(B[m)[32me"[39m(B[m)[32mw"[39m(B[m)[48G[18ditem[[C[C[18;17H[A[1P[1P[1P[1Pp = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)pa = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)pas = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)passs = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)[5Gw = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)[6Go = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)[7Gr = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)[8Gd = (B[0;1m[34mChefVault[39m(B[m::(B[0;1m[34mItem[39m(B[m.load([32m"passwords"[39m(B[m, [32m"new"[39m(B[m)[17;9H[17;52H[18dite[1P[1P[1P[1Pp[[32m"password"[39m(B[m]pa[[32m"password"[39m(B[m]pas[[32m"password"[39m(B[m]passs[[32m"password"[39m(B[m][5Gw[[32m"password"[39m(B[m][6Go[[32m"password"[39m(B[m][7Gr[[32m"password"[39m(B[m][8Gd[[32m"password"[39m(B[m][18;9H[18;21H7[18;26r8M[1;28r[19;1H[A[18;9Hfile '[32m''[39m(B[m[32m/'[39m(B[m[32mr'[39m(B[m[32mo'[39m(B[m[32moo'[39m(B[m[32mt'[39m(B[m[32m/'[39m(B[m[32md'[39m(B[m[32mb'[39m(B[m[32m'[39m(B[m[K[32m'[39m(B[m[K[32mp'[39m(B[m[32ma'[39m(B[m[32ms'[39m(B[m[32mss'[39m(B[m[32mw'[39m(B[m[32mo'[39m(B[m[32mr'[39m(B[m[32md'[39m(B[m[C d[33mdo[39m(B[m7[19;26r8[19dM[1;28r[19;1H[19;9Hcontent password[]"][32m""[39m(B[m][32mp"[39m(B[m][32ma"[39m(B[m][32ms"[39m(B[m][32mss"[39m(B[m][32mw"[39m(B[m][32mo"[39m(B[m][32mr"[39m(B[m][32md"[39m(B[m][37G[20;21H[20;21H [20;10H"password[K                 [K[19;37H[20d[20;9Haction :[35m :c[39m(B[m[35mr[39m(B[m[35me[39m(B[m[35ma[39m(B[m[35mt[39m(B[m[35me[39m(B[m[21den[33mend[39m(B[m[26d(B[0;7mSave modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ?                    [27;1H Y(B[m Yes[K[28d(B[0;7m N(B[m No  [14G   (B[0;7m^C(B[m Cancel[K[26;62H(B[0;7mFile Name to Write: default.rb                              [27d^G(B[m Get Help[27;21H(B[0;7mM-D(B[m DOS Format[41G(B[0;7mM-A(B[m Append[27;61H(B[0;7mM-B(B[m Backup File[28d(B[0;7m^C(B[m Cancel[17G    (B[0;7mM-M(B[m Mac Format[41G(B[0;7mM-P(B[m Prepend[26;31H[27d[39;49m(B[m[J[1;71H(B[0;7m        [26;31H(B[m[1K (B[0;7m[ Wrote 19 lines ](B[m[K[28;80H[28;1H[?1049l[?1l>]0;root@workstation: ~/chef-repo/cookbooks/vault/recipesroot@workstation:~/chef-repo/cookbooks/vault/recipes# cd ..
+]0;root@workstation: ~/chef-repo/cookbooks/vaultroot@workstation:~/chef-repo/cookbooks/vault# cd ..
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cool[Kkbook upload [K
+USAGE: knife cookbook upload [COOKBOOKS...] (options)
+    -a, --all                        Upload all cookbooks, rather than just a single cookbook
+    -s, --server-url URL             Chef Server URL
+        --chef-zero-host HOST        Host to start chef-zero on
+        --chef-zero-port PORT        Port (or port range) to start chef-zero on.  Port ranges like 1000,1010 or 8889-9999 will try all given ports until one works.
+    -k, --key KEY                    API Client Key
+        --[no-]color                 Use colored output, defaults to enabled
+        --concurrency NUMBER_OF_THREADS
+                                     How many concurrent threads will be used
+    -c, --config CONFIG              The configuration file to use
+        --config-option OPTION=VALUE Override a single configuration option
+    -o, --cookbook-path PATH:PATH    A colon-separated path to look for cookbooks in
+        --defaults                   Accept default values for all questions
+        --include-dependencies       Also upload cookbook dependencies
+    -d, --disable-editing            Do not open EDITOR, just accept the data as is
+    -e, --editor EDITOR              Set the editor to use for interactive commands
+    -E, --environment ENVIRONMENT    Set ENVIRONMENT's version dependency match the version you're uploading.
+        --[no-]fips                  Enable fips mode
+        --force                      Update cookbook versions even if they have been frozen
+    -F, --format FORMAT              Which format to use for output
+        --freeze                     Freeze this version of the cookbook so that it cannot be overwritten
+        --[no-]listen                Whether a local mode (-z) server binds to a port
+    -z, --local-mode                 Point knife commands at local repository instead of server
+    -u, --user USER                  API Client Username
+        --print-after                Show the data after a destructive operation
+    -V, --verbose                    More verbose output. Use twice for max verbosity
+    -v, --version                    Show chef version
+    -y, --yes                        Say yes to all prompts for confirmation
+    -h, --help                       Show this message
+[31m[1mFATAL:[0m You must specify the --all flag or at least one cookbook name
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cookbook upload 
+arraytest/  filetrans/  newcook/    starter/    vault/      
+chefignore  logic/      ntp/        useradd/    webserver/  
+cookcook/   newbook/    remotefile/ usermanage/ 
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cookbook upload vault
+Uploading vault          [0.1.0]
+Uploaded 1 cookbook.
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife cookbook run_list
+FATAL: Cannot find subcommand for: 'cookbook run_list'
+Available cookbook subcommands: (for details, knife SUB-COMMAND --help)
+
+** COOKBOOK COMMANDS **
+knife cookbook bulk delete REGEX (options)
+knife cookbook create COOKBOOK (options)
+knife cookbook delete COOKBOOK VERSION (options)
+knife cookbook download COOKBOOK [VERSION] (options)
+knife cookbook list (options)
+knife cookbook metadata COOKBOOK (options)
+knife cookbook metadata from FILE (options)
+knife cookbook show COOKBOOK [VERSION] [PART] [FILENAME] (options)
+knife cookbook test [COOKBOOKS...] (options)
+knife cookbook upload [COOKBOOKS...] (options)
+
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife node run_list add node ""r"e"c"i"p"e"["]"v]" [A]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca]""[A]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu]"l]"t]":]":]"D]"e]"a]"[1P]"[1P]"[1P]"d]"e]"f]"a]"u]"l]"t]"[C[C
+[31m[1mERROR:[0m The object you are looking for could not be found
+Response: node 'node' not found
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife node run_list add node "recipe[vaullt::default]"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1 "recipe[vault::default]"[A]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[36mnode1:
+[0m  [36mrun_list:
+  [0m  role[frontend]
+    recipe[vault::default]
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife node run_list add node1 "recipe[vauult::default]"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
