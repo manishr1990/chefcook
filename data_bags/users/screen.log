@@ -600,4 +600,97 @@ Response: node 'node' not found
 [0m  [36mrun_list:
   [0m  role[frontend]
     recipe[vault::default]
-]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife node run_list add node1 "recipe[vauult::default]"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# knife node run_list add node1 "recipe[vauult::default]"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "recipe[vaul[1Pt::default]"[A]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2 "recipe[vault::default]"[A]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[36mnode2:
+[0m  [36mrun_list:
+  [0m  recipe[cookcook::new]
+    recipe[newbook::default]
+    recipe[logic::default]
+    recipe[ntp::default]
+    recipe[webserver::default]
+    recipe[useradd::default]
+    recipe[vault::default]
+]0;root@workstation: ~/chef-repo/cookbooksroot@workstation:~/chef-repo/cookbooks# cd ..
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# git -Add *
+Unknown option: -Add
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# git -Add *[C[1P[1@a[C[C[C[C
+Unknown option: -add
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# git add *
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# git commit -m ""v"a"u"l"t"
+[master 1adac83] vault
+ 13 files changed, 850 insertions(+), 8 deletions(-)
+ create mode 100644 cookbooks/usermanage/CHANGELOG.md
+ create mode 100644 cookbooks/usermanage/README.md
+ create mode 100644 cookbooks/usermanage/metadata.rb
+ create mode 100644 cookbooks/usermanage/recipes/default.rb
+ create mode 100644 cookbooks/vault/CHANGELOG.md
+ create mode 100644 cookbooks/vault/README.md
+ create mode 100644 cookbooks/vault/metadata.rb
+ create mode 100644 cookbooks/vault/recipes/default.rb
+ create mode 100644 data_bags/users/screen.log
+ create mode 100644 data_bags/users/u1.json
+ create mode 100644 data_bags/users/u2.json
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# git push origin master
+Username for 'https://github.com': manishr1990
+Password for 'https://manishr1990@github.com': 
+Counting objects: 29, done.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/24)   Writing objects:   8% (2/24)   Writing objects:  12% (3/24)   Writing objects:  16% (4/24)   Writing objects:  25% (6/24)   Writing objects:  33% (8/24)   Writing objects:  41% (10/24)   Writing objects:  45% (11/24)   Writing objects:  50% (12/24)   Writing objects:  54% (13/24)   Writing objects:  58% (14/24)   Writing objects:  62% (15/24)   Writing objects:  66% (16/24)   Writing objects:  70% (17/24)   Writing objects:  75% (18/24)   Writing objects:  79% (19/24)   Writing objects:  83% (20/24)   Writing objects:  87% (21/24)   Writing objects:  91% (22/24)   Writing objects:  95% (23/24)   Writing objects: 100% (24/24)   Writing objects: 100% (24/24), 12.45 KiB | 0 bytes/s, done.
+Total 24 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 4 local objects.[K
+To https://github.com/manishr1990/chefcook.git
+   4aed36b..1adac83  master -> master
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# kjn[K[Knife vauklt [K[K[K[Klt update passwords new -A node1[K2
+WARNING: node2 not found in users, trying clients.
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife vault update passwords new -A node2 -M clien t
+WARNING: node2 not found in users, trying clients.
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# cdhe[K[K[Khef grm[K[Kem install knife-ec2
+Fetching: knife-ec2-0.15.0.gemFetching: knife-ec2-0.15.0.gem (  4%)Fetching: knife-ec2-0.15.0.gem (  8%)Fetching: knife-ec2-0.15.0.gem ( 13%)Fetching: knife-ec2-0.15.0.gem ( 18%)Fetching: knife-ec2-0.15.0.gem ( 23%)Fetching: knife-ec2-0.15.0.gem ( 27%)Fetching: knife-ec2-0.15.0.gem ( 32%)Fetching: knife-ec2-0.15.0.gem ( 36%)Fetching: knife-ec2-0.15.0.gem ( 41%)Fetching: knife-ec2-0.15.0.gem ( 46%)Fetching: knife-ec2-0.15.0.gem ( 51%)Fetching: knife-ec2-0.15.0.gem ( 55%)Fetching: knife-ec2-0.15.0.gem ( 83%)Fetching: knife-ec2-0.15.0.gem (100%)Fetching: knife-ec2-0.15.0.gem (100%)
+WARNING:  You don't have /root/.chefdk/gem/ruby/2.3.0/bin in your PATH,
+	  gem executables will not run.
+Successfully installed knife-ec2-0.15.0
+1 gem installed
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife ed[Kc2
+FATAL: Cannot find subcommand for: 'ec2'
+Available ec2 subcommands: (for details, knife SUB-COMMAND --help)
+
+** EC2 COMMANDS **
+knife ec2 ami list (options)
+knife ec2 amis ubuntu DISTRO [TYPE] (options)
+knife ec2 flavor list (options)
+knife ec2 server create (options)
+knife ec2 server delete SERVER [SERVER] (options)
+knife ec2 server list (options)
+
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife ec2 server list
+[31m[1mERROR:[0m You did not provide a valid 'AWS Access Key Id' value.
+[31m[1mERROR:[0m You did not provide a valid 'AWS Secret Access Key' value.
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# knife cookbook site install apo[Kache
+Installing apache to /root/chef-repo/cookbooks
+[31m[1mERROR:[0m You have uncommitted changes to your cookbook repo (/root/chef-repo/cookbooks):
+ M data_bags/users/screen.log
+?? .chef/syntaxcache/00e65341be7ddb41e1b973fb0304b265f2d6a28193ed400a43bceea75cf712e8
+?? .chef/syntaxcache/5f292c60b35b244393d47acf3cee25b4295771186883561c77508c2d1c5a70d7
+?? .chef/syntaxcache/8aa33bbc827bc8487200b88da5bc755a65fe12774783311283c1560892ac6679
+?? .chef/syntaxcache/8d27fa2212ce73345dbb825f5738e02b7ec26e2e0cb4f12fb6645be0c4cc3168
+?? .chef/syntaxcache/93a4c622e597d034e13b23c65f9e41552a5f0d5d76a2247c9a9641a175f34873
+?? .chef/syntaxcache/a4f21a5e9301a5e8f360374b378fe9493402d5b95affdee03397a2b0eabadb69
+?? .chef/syntaxcache/a61478f38e9c7a6d9f9c667f55be336fc6f5a176c7c34eab138d913cad53c3a7
+?? .chef/syntaxcache/fa49dd37dc0b592c35782078e457de5231e019cd21c228b82e99ad1e30434eb6
+?? data_bags/passwords/
+Commit or stash your changes before importing cookbooks
+]0;root@workstation: ~/chef-reporoot@workstation:~/chef-repo# exit
+exit
+
+Script done on Wednesday 21 June 2017 12:24:22 PM IST
